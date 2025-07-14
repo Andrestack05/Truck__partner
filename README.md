@@ -1,69 +1,62 @@
-# React + TypeScript + Vite
+# Truck Partner
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Truck Partner es una plataforma web moderna diseñada para conectar clientes que necesitan transportar mercancías con conductores de vehículos de carga (tractomulas, camiones, NPR, vans, entre otros). El objetivo es facilitar el proceso de búsqueda, rastreo y contratación de servicios de transporte de forma eficiente, visualmente atractiva y segura.
 
-Currently, two official plugins are available:
+## 📅 Estado del proyecto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Actualmente en desarrollo. Se está trabajando en la autenticación de usuarios (cliente y conductor), interfaces personalizadas y funcionalidades como carga de servicios, historial de viajes, rastreo en tiempo real y suscripciones.
 
-## Expanding the ESLint configuration
+## 💪 Tecnologías utilizadas
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Frontend:**
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+  - React 19
+  - TypeScript
+  - Tailwind CSS
+  - React Hook Form (validación de formularios)
+  - React Toastify (notificaciones)
+  - React Router DOM (navegación)
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- **Backend:** _(por implementar)_
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+  - Node.js + Express
+  - MongoDB (opcional, planeado para reemplazar localStorage)
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- **Herramientas y Librerías Adicionales:**
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+  - Vite (empacador y servidor de desarrollo)
+  - ESLint (estandarización de código)
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🏙️ Funcionalidades principales (MVP)
+
+- Registro y login diferenciados para clientes y conductores.
+- Menús condicionales según tipo de usuario.
+- Almacenamiento de usuarios temporal en `localStorage`.
+- Interfaz visual elegante y responsive usando Tailwind CSS.
+- Validación de formularios en tiempo real.
+- Navegación entre secciones (Home, Servicios, Registro, Login, etc).
+
+## ✨ Planes futuros
+
+- Integración con base de datos MongoDB.
+- Rastreo de ubicación en tiempo real.
+- Sistema de búsqueda y filtrado de carga o transporte.
+- Perfil personalizado para clientes y conductores.
+- Pasarela de pagos (Stripe o similar).
+- Hosting y despliegue en Vercel / Hostinger.
+
+## ⚖️ Licencia
+
+Este proyecto está en desarrollo y aún no tiene una licencia específica asignada.
+
+## 👤 Autor
+
+- Pablo Andrés Suárez Rocha
+
+  - Ingeniero de Sistemas | Desarrollador Web FullStack Jr.
+  - [GitHub](https://github.com/Andrestack05)
+  - Duitama, Boyacá, Colombia
+
+---
+
+> Proyecto realizado como parte del camino autodidacta hacia el desarrollo fullstack moderno. 🚀
